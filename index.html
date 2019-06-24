@@ -246,7 +246,7 @@ if(i!==5){slide(views[i],last);last=views[i]}
 if(i==5){console.log("walk")
 walk()}
 if(i>4){console.log("reset",i)
-i=0;console.log("resetet",i)}},3000)
+i=-1;console.log("resetet",i)}},3000)
 let svg2=document.querySelector('#svg-2-l');svg2.innerHTML=views[0].innerHTML;TweenLite.set(".container",{perspective:100000});TweenLite.set(".boxes",{transformStyle:"preserve-3d"});TweenLite.set('.box',{transformStyle:"preserve-3d",transformOrigin:"50% 50% -98px",transformPerspective:100000});function slide(nextEl,lastEl){let tl=new TimelineLite();tl.set('.box-right',{rotationY:90});tl.set('.box-left',{rotationY:0,opacity:1});setNext(nextEl)
 if(lastEl){setLast(lastEl)}
 tl.to('.box-left',.4,{rotationY:-90,opacity:0,ease:Linear.easeNone});tl.to('.box-right',.4,{rotationY:0,ease:Linear.easeNone},0.1)}
