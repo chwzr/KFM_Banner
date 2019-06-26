@@ -436,6 +436,8 @@ setInterval(()=>{
     }
     if(i > 4){
         console.log("reset",i)
+        setNext(views[0])
+        setLast(views[0])
         i = -1;
         console.log("resetet",i)
     }
